@@ -4,7 +4,7 @@
 #include <time.h>
 #include <conio.h>//Para usar o getch e kbhit
 #include <windows.h>//Para usar o sleep
-#include <locale.h>//permite acentua  o
+#include <locale.h>//permite acentuaï¿½ï¿½o
 
 #define ALTURA1 10
 #define LARGURA1 10 //Altura e largura primeira fase
@@ -316,13 +316,13 @@ void cuts_bosque(){
         {
             
             printf(YELLOW"%c"RESET, introducao[i][j]);RESET; // Reseta a cor do texto
-            Sleep(40); // Pausa para dar efeito de animação
+            Sleep(40); // Pausa para dar efeito de animaÃ§Ã£o
             if(kbhit()) { // Verifica se uma tecla foi pressionada
-            getch(); // Lê a tecla pressionada
+            getch(); // LÃª a tecla pressionada
             break; // Interrompe o loop se uma tecla for pressionada
         }
         }
-        printf("\n"); // Nova linha após cada frase
+        printf("\n"); // Nova linha apÃ³s cada frase
         Sleep(30);
     
         if(i==4){
@@ -331,7 +331,7 @@ void cuts_bosque(){
     }
     printf("\n<------------------------------------------------------------------------========------------------------------------------------------------------------------->\n");
     Sleep(2000);
-    system("cls"); // Limpa a tela após a introdução
+    system("cls"); // Limpa a tela apÃ³s a introduÃ§Ã£o
     // Exibe a primeira parte da cutscene
 for (i = 0; i < 25; i++) { // entrada_bosque: 25x80
     for (j = 0; j < 80; j++) {
@@ -459,13 +459,13 @@ void cor_vermelho_escuro() {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4); // 4 = dark red
 }
 
-// Resetar cor (padrão do console)
+// Resetar cor (padrÃ£o do console)
 void cor_resetar() {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7); // 7 = cinza claro padrão
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7); // 7 = cinza claro padrÃ£o
 }
     
 void RENICIARMAPA1() {
-    // Função para reiniciar o mapa 1
+    // FunÃ§Ã£o para reiniciar o mapa 1
     for (int i = 0; i < ALTURA1; i++) {
         for (int j = 0; j < LARGURA1; j++) {
             mapa1[i][j] = mapa1_reset[i][j];
@@ -473,7 +473,7 @@ void RENICIARMAPA1() {
     }
 }
 void RENICIARMAPA2() {
-    // Função para reiniciar o mapa 2
+    // FunÃ§Ã£o para reiniciar o mapa 2
     for (int i = 0; i < ALTURA2; i++) {
         for (int j = 0; j < LARGURA2; j++) {
             mapa2[i][j] = mapa2_reset[i][j];
@@ -481,7 +481,7 @@ void RENICIARMAPA2() {
     }
 }
 void RENICIARMAPA3() {
-    // Função para reiniciar o mapa 3
+    // FunÃ§Ã£o para reiniciar o mapa 3
     for (int i = 0; i < ALTURA3; i++) {
         for (int j = 0; j < LARGURA3; j++) {
             mapa3[i][j] = mapa3_reset[i][j];
@@ -489,7 +489,7 @@ void RENICIARMAPA3() {
     }
 }
 
-//função pro tutoras
+//funÃ§Ã£o pro tutoras
 void INICIAR_TUTORAS() {
     for (int i = 0; i < ALTURA1; i++) {
         for (int j = 0; j < LARGURA1; j++) {
@@ -504,14 +504,14 @@ void INICIAR_VILA() {
         }
     }
 }
-// Função para iniciar o mapa
+// FunÃ§Ã£o para iniciar o mapa
 void iniciarMapa(int fase) {
     int i,j;
     if(fase<=3){//Fase 1, vila e tutorial
         for (i = 0; i < 10; i++) {
             for (j = 0; j < 10; j++) {
                 if(mapa1[i][j] == '.') {
-                    cor_marrom(); // Cor marrom para o chão
+                    cor_marrom(); // Cor marrom para o chÃ£o
                 }
                 if(mapa1[i][j] == '*' || mapa1[i][j] == '#') {
                     cor_amarelo_escuro(); // Cor amarela escura para a parede ou espinhos
@@ -529,7 +529,7 @@ void iniciarMapa(int fase) {
                     cor_ciano();
                 }
                 printf(" %c ", mapa1[i][j]);
-                cor_resetar(); // Reseta a cor para o padrão do console
+                cor_resetar(); // Reseta a cor para o padrÃ£o do console
             }
             printf("\n");
         }
@@ -538,7 +538,7 @@ void iniciarMapa(int fase) {
         for (i = 0; i < 20; i++) {
             for (j = 0; j < 20; j++) {
                 if(mapa1[i][j] == '.') {
-                    cor_marrom(); // Cor marrom para o chão
+                    cor_marrom(); // Cor marrom para o chÃ£o
                 }
                 if(mapa1[i][j] == '*' || mapa1[i][j] == '#') {
                     cor_amarelo_escuro(); // Cor amarela escura para a parede ou espinhos
@@ -553,7 +553,7 @@ void iniciarMapa(int fase) {
                     cor_vermelho_escuro(); // Cor vermelha escura para o NPC
                 }
                 printf(" %c ", mapa1[i][j]);
-                cor_resetar(); // Reseta a cor para o padrão do console
+                cor_resetar(); // Reseta a cor para o padrÃ£o do console
             }
             printf("\n");
         }
@@ -561,29 +561,29 @@ void iniciarMapa(int fase) {
         for (i = 0; i < 40; i++) {
             for (j = 0; j < 41; j++) {
                 if(mapa1[i][j] == '.') {
-                    cor_marrom(); // Cor marrom para o chão
+                    cor_marrom(); // Cor marrom para o chÃ£o
                     printf(" %c ", mapa1[i][j]);
-                    cor_resetar(); // Reseta a cor para o padrão do console
+                    cor_resetar(); // Reseta a cor para o padrÃ£o do console
                 }
                 if(mapa1[i][j] == '*' || mapa1[i][j] == '#') {
                     cor_amarelo_escuro(); // Cor amarela escura para a parede ou espinhos
                     printf(" %c ", mapa1[i][j]);
-                    cor_resetar(); // Reseta a cor para o padrão do console
+                    cor_resetar(); // Reseta a cor para o padrÃ£o do console
                 }
                 if (mapa1[i][j] == 'D') {
                     cor_roxo(); // Cor roxa para a porta
                     printf(" %c ", mapa1[i][j]);
-                    cor_resetar(); // Reseta a cor para o padrão do console
+                    cor_resetar(); // Reseta a cor para o padrÃ£o do console
                 }
                 if (mapa1[i][j] == 'P' || mapa1[i][j]=='@' || mapa1[i][j]=='O' || mapa1[i][j]=='>') {
                     cor_amarelo_claro(); // Cor amarela clara para o NPC
                     printf(" %c ", mapa1[i][j]);
-                    cor_resetar(); // Reseta a cor para o padrão do console
+                    cor_resetar(); // Reseta a cor para o padrÃ£o do console
                 }
                 if(mapa1[i][j] == 'V' || mapa1[i][j] == 'X') {
                     cor_vermelho_escuro(); // Cor vermelha escura para o NPC
                     printf(" %c ", mapa1[i][j]);
-                    cor_resetar(); // Reseta a cor para o padrão do console
+                    cor_resetar(); // Reseta a cor para o padrÃ£o do console
                 }
             }
             printf("\n");
@@ -591,7 +591,7 @@ void iniciarMapa(int fase) {
     }
 }
 
-// Função para iniciar o mapa 2
+// FunÃ§Ã£o para iniciar o mapa 2
 void iniciarMapa2() {
     for (int i = 0; i < ALTURA2; i++) {
         for (int j = 0; j < LARGURA2; j++) {
@@ -602,7 +602,7 @@ void iniciarMapa2() {
     
 }
 
-// Função para iniciar o mapa 3
+// FunÃ§Ã£o para iniciar o mapa 3
 void iniciarMapa3() {
     for (int i = 0; i < ALTURA3; i++) {
         for (int j = 0; j < LARGURA3; j++) {
@@ -612,10 +612,10 @@ void iniciarMapa3() {
     }
 }
 
-// Função para mover o player
+// FunÃ§Ã£o para mover o player
 void moveplayer(int *y, int *x, char *dire, int *chavecoletada, int *cimachave, int *vida, int *frenteporta, int *fase, int *cimaBotao, int *frenteNPC) {
     int novax = *x, novay = *y;
-    static int cimaTP= 0; // Variável estática para verificar se o player está em cima do TP
+    static int cimaTP= 0; // VariÃ¡vel estÃ¡tica para verificar se o player estÃ¡ em cima do TP
     switch (*dire) {
         case 'w': novay = *y - 1; break;//cima
         case 's': novay = *y + 1; break;//baixo
@@ -623,11 +623,11 @@ void moveplayer(int *y, int *x, char *dire, int *chavecoletada, int *cimachave, 
         case 'a': novax = *x - 1; break;//esquerda
         default: break;
     }
-        // Verifica se o novo movimento é válido ou se a realidade não é apenas uma simulação criada pelas grandes empresas para fazer uma pesquisa de mercado
+        // Verifica se o novo movimento Ã© vÃ¡lido ou se a realidade nÃ£o Ã© apenas uma simulaÃ§Ã£o criada pelas grandes empresas para fazer uma pesquisa de mercado
         if (mapa1[novay][novax] == '.' || mapa1[novay][novax] == '@' || mapa1[novay][novax] == 'O' || mapa1[novay][novax] == '>') {
-            //O bgl do TP lá. ACABA PELO O AMOR DE DEEEEEEEEEEEEEEEUS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            //O bgl do TP lÃ¡. ACABA PELO O AMOR DE DEEEEEEEEEEEEEEEUS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
             if (mapa1[novay][novax] == '>') {
-                // Devolve o que estava na posição anterior do player (eu te odeio teletransporte... eu te odeio)
+                // Devolve o que estava na posiÃ§Ã£o anterior do player (eu te odeio teletransporte... eu te odeio)
                 if (*cimachave == 1) {
                     mapa1[*y][*x] = '@';
                     *cimachave = 0;
@@ -645,22 +645,22 @@ void moveplayer(int *y, int *x, char *dire, int *chavecoletada, int *cimachave, 
                     for (int j = 0; j < LARGURA3; j++) {
                         if (mapa1[i][j] == '>' && (i != novay || j != novax)) {
                             *y = i; 
-                            *x = j;//Os ponteiros do player mudam pra a outra posição
+                            *x = j;//Os ponteiros do player mudam pra a outra posiÃ§Ã£o
                             novax=*x;
                             novay=*y;
                             mapa1[novay][novax] = '&';
                             cimaTP = 1;
-                            return; // Sai da função para não executar o resto do movimento e quebrar essa porcaria mais uma vez
+                            return; // Sai da funÃ§Ã£o para nÃ£o executar o resto do movimento e quebrar essa porcaria mais uma vez
                         }
                     }
                 }
              }
-            //Não faça mais merda nesse código por favor eu não aguento mais corrigir coisas nessa desgraça, Aiam. ASS: Aiam
+            //NÃ£o faÃ§a mais merda nesse cÃ³digo por favor eu nÃ£o aguento mais corrigir coisas nessa desgraÃ§a, Aiam. ASS: Aiam
             // Se estava em cima da chave, devolve a chave ao local anterior
             if (*cimachave == 1) {
                 mapa1[*y][*x] = '@';
                 *cimachave = 0;
-            } else if (*cimaBotao == 1) {//Se estiver em cima do botão ele volta de ladinho
+            } else if (*cimaBotao == 1) {//Se estiver em cima do botÃ£o ele volta de ladinho
                 mapa1[*y][*x] = 'O';
                 *cimaBotao = 0;
             } else if(cimaTP == 1){//Se estiver em cima dessa merda de teletransporte
@@ -669,11 +669,11 @@ void moveplayer(int *y, int *x, char *dire, int *chavecoletada, int *cimachave, 
             } else {
                 mapa1[*y][*x] = '.';
             }
-            // Se vai pisar na chave, marca que está em cima dela
+            // Se vai pisar na chave, marca que estÃ¡ em cima dela
             if (mapa1[novay][novax] == '@') {
                 *cimachave = 1;
             }
-            // Se vai pisar no botão, marca que está em cima dele
+            // Se vai pisar no botÃ£o, marca que estÃ¡ em cima dele
             if (mapa1[novay][novax] == 'O') {
                 *cimaBotao = 1;
             }
@@ -681,7 +681,7 @@ void moveplayer(int *y, int *x, char *dire, int *chavecoletada, int *cimachave, 
             mapa1[novay][novax] = '&';
             *y = novay;
             *x = novax;
-            // Verifica se está em frente à porta
+            // Verifica se estÃ¡ em frente Ã  porta
             if ((mapa1[novay+1][novax]=='D' ||    mapa1[novay-1][novax]=='D' ||
                 mapa1[novay][novax+1]=='D' ||  mapa1[novay][novax-1]=='D')) {
                 *frenteporta = 1;
@@ -689,7 +689,7 @@ void moveplayer(int *y, int *x, char *dire, int *chavecoletada, int *cimachave, 
                 *frenteporta = 0; // Reseta a porta em frente ao player
             }
 
-            // Verifica se está em frente à porta aberta para mudar de fase
+            // Verifica se estÃ¡ em frente Ã  porta aberta para mudar de fase
             if ((mapa1[novay+1][novax]=='=' ||    mapa1[novay-1][novax]=='=' ||
                 mapa1[novay][novax+1]=='=' ||  mapa1[novay][novax-1]=='=')) {
                 *fase += 1;
@@ -697,7 +697,7 @@ void moveplayer(int *y, int *x, char *dire, int *chavecoletada, int *cimachave, 
             if (mapa1[novay+1][novax]=='P' ||    mapa1[novay-1][novax]=='P' ||
                 mapa1[novay][novax+1]=='P' ||  mapa1[novay][novax-1]=='P') {
                 *frenteNPC = 1;
-                //Verificar se o player está em frente a um NPC
+                //Verificar se o player estÃ¡ em frente a um NPC
             }else{
                 *frenteNPC = 0; // Reseta o NPC em frente ao player
             }
@@ -759,7 +759,7 @@ puts("");
                 *vida=3; // reseta a vida
                 *chavecoletada = 0; // Reseta a chave coletada
                 mapa1[*y][*x] = '.'; // Corpo do player some antes de resetar
-                *x = 1,*y=1; // Reseta a posição do player
+                *x = 1,*y=1; // Reseta a posiÃ§Ã£o do player
                 *fase=0; //volta pro menu
                 return;
             } else{
@@ -816,7 +816,7 @@ puts("");
                 *vida-=1; // Perde uma vida
                 *chavecoletada = 0; // Reseta a chave coletada
                 mapa1[*y][*x] = '.'; // Corpo do player some antes de resetar
-                *x = 1,*y=1; // Reseta a posição do player
+                *x = 1,*y=1; // Reseta a posiÃ§Ã£o do player
                 if(*fase==3){
                     RENICIARMAPA1(); // Reinicia o mapa 1
                     iniciarMapa(1); // Reinicia o mapa 1
@@ -885,7 +885,7 @@ puts("");
                 *vida-=1; // Perde uma vida
                 *chavecoletada = 0; // Reseta a chave coletada
                 mapa1[*y][*x] = '.'; // Corpo do player some antes de resetar
-                *x = 1,*y=1; // Reseta a posição do player
+                *x = 1,*y=1; // Reseta a posiÃ§Ã£o do player
                 if(*fase==3){
                     RENICIARMAPA1(); // Reinicia o mapa 1
                     iniciarMapa(1); // Reinicia o mapa 1
@@ -956,7 +956,7 @@ puts("");
                 *vida-=1; // Perde uma vida
                 *chavecoletada = 0; // Reseta a chave coletada
                 mapa1[*y][*x] = '.'; // Corpo do player some antes de resetar
-                *x = 1,*y=1; // Reseta a posição do player
+                *x = 1,*y=1; // Reseta a posiÃ§Ã£o do player
                 if(*fase==3){
                     RENICIARMAPA1(); // Reinicia o mapa 1
                     iniciarMapa(1); // Reinicia o mapa 1
@@ -974,10 +974,10 @@ puts("");
 }
 
 
-// Função para o inimigo lv:1
+// FunÃ§Ã£o para o inimigo lv:1
 void bixinLV1(int *x, int *y, int *dire, int *vida, int *fase, int *chavecoletada, int *xp, int *yp) {
     int novax = *x, novay = *y;
-    const int xorig = *x, yorig = *y; // Posição original do inimigo
+    const int xorig = *x, yorig = *y; // PosiÃ§Ã£o original do inimigo
     *dire = (rand() % 4);
     switch (*dire) {
         case 0: novay = *y - 1; break;
@@ -1049,8 +1049,8 @@ puts("");
                 *vida=3; // Perde uma vida
                 *chavecoletada = 0; // Reseta a chave coletada
                 mapa1[*xp][*yp] = '.'; // Corpo do player some antes de resetar
-                *xp = 1,*yp=1; // Reseta a posição do player
-                *x = xorig, *y= yorig; // Reseta a posição do inimigo
+                *xp = 1,*yp=1; // Reseta a posiÃ§Ã£o do player
+                *x = xorig, *y= yorig; // Reseta a posiÃ§Ã£o do inimigo
                 if(*fase==3){
                     RENICIARMAPA1(); // Reinicia o mapa 1
                     iniciarMapa(1); // Reinicia o mapa 1
@@ -1062,7 +1062,7 @@ puts("");
                     iniciarMapa3(); // Inicia o mapa 3
                 }
                 *fase=0; //volta pro menu
-                return; // Sai da função para não executar o resto do movimento e quebrar essa porcaria mais uma vez
+                return; // Sai da funÃ§Ã£o para nÃ£o executar o resto do movimento e quebrar essa porcaria mais uma vez
             } else{
 				system("cls");
 
@@ -1093,4 +1093,605 @@ puts("@@@@@%=.--....-=#@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+::.:........-:.....
 puts("@@@@@@@@@@+....=%@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#**-..:#:................:@@#....+@@@@%@@@@*");
 puts("@@@@@@@@@@@@+..:+@@@@@@%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+:..+%:....=########@..:%@#...=%%=.%@@**@*");
 puts("@@@%@@@#*@@@*.+*.#@@@%@@@@@@@@@@@@@@@@@@@%@@%####@@@@@%@@@@#:-=.....:%====....=*:..+*...+*:..:@@++@*");
-puts("@@@@@=...-%@*...-%@@@@@@@@@@@@*:.....:=*@@@@@@@@@@@@@@@@%@@@%==-....:%-+#-%:..:%:.
+puts("@@@@@=...-%@*...-%@@@@@@@@@@@@*:.....:=*@@@@@@@@@@@@@@@@%@@@%==-....:%-+#-%:..:%:............+@@=+*.");
+puts("@@@@%:.-=:#%=..:#@%#@@@@@@@@#:..........-##%@@@@@@@@@@%####%@*=:....:%=---*:.:-%=========:...:@=.:..");
+puts("@@@@%:...+=:.:+@@%#%@@@@@@@=................:::*@@@@@@=.:-#%@@%-.....=@%*+++#%%@@@@@#:-*%@-...:.....");
+puts("@#+@@*:......*@@@@@@@@@@@@=................--.=*****#@@%::+-:#@-.......*@@*=-*..=@@@@%%%%@%-........");
+puts("@%++@%=....=+*@@@@@@@@%%#-...-:...........:+***********#@#==+--**-=*:.=*%*=#%+..:#@@%=+=.+%-........");
+puts("*@%++@@@#-..-%@@@@@@%%%+:..................-*************#%#*++:-#*@@**#%%++:..-=+@@%-:++.#-........");
+puts(".-##+...::..+@@@@@@@@@++::::..:..-:.....:.:=***************++#**@@=%*#%+...::=@@%%@@@@@@@@#-........");
+puts(".......=*::+@@@@@@@@=..::...=...=:......-************+--=:......-#+@#%%*#@@@%###%%%%%##+:...........");
+puts("-+.:+:=+:+*#@@@@@@@+..=-::.......+:..:+****+*******+-.::=.......##=:.:*@%%@=:...:==+##:.............");
+puts("....-*+@@@@@@@@@@@++=.=%-#-:@:......===******#****=:..:=:............=*....=#-.:=+@%+*@*............");
+puts("=+-*.=@@@@@@%@@@@@+:=-::.:-=..-::*=#-+*+**+**+**+++-.::.............:+#::=+@%%%%%*===++#@*:...::=+..");
+puts("*=+:*=@@@@@@@@@%%@%+*++=*=-.:----+=*=***+-+*++**=.==+-.:.+-=:.....:#@=--++@@-....=%%#++*@@%-:*+*:...");
+puts("@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@@@@@@%%@@@@@@@@@@%@@@@%@@@%%%%%@@@@@@@@@@@%%%%%%%@@@@@@@@@@@@@@%@");
+puts("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+puts("....................................................................................................");
+puts("....................................................................................................");
+puts("....................................................................................................");
+
+puts("");
+puts("ALGO TERRiVEL(Porem nao inesperado) ACONTECE");
+puts("nosso heroi deu de cara com um monstro cego, porem tao agil que conseguiu lhe matar sem nem mesmo ele perceber");
+puts("Descanse em paz heroi, os dois nao viram o que aconteceu...");
+puts("");
+                system("pause");
+                *vida-=1; // Perde uma vida
+                *chavecoletada = 0; // Reseta a chave coletada
+                mapa1[*yp][*xp] = '.'; // Corpo do player some antes de resetar
+                *xp = 1,*yp=1; // Reseta a posiÃ§Ã£o do player
+                if(*fase==3){
+                    RENICIARMAPA1(); // Reinicia o mapa 1
+                    iniciarMapa(1); // Reinicia o mapa 1
+                } else if(*fase==4){
+                    RENICIARMAPA2(); // Reinicia o mapa 2
+                    iniciarMapa2(); // Inicia o mapa 2
+                } else if(*fase==5){
+                    RENICIARMAPA3(); // Reinicia o mapa 3
+                    iniciarMapa3(); // Inicia o mapa 3
+					}
+                
+            }
+        }
+}
+
+void bixinLV2(int *yb, int *xb, int *yp, int *xp, int *vida, int *fase, int *chavecoletada) {
+    int novax = *xb, novay = *yb;
+    int dire = -1;
+    const int xorig = *xb, yorig = *yb; // PosiÃ§Ã£o original do inimigo
+    // Decide a direÃ§Ã£o prioritÃ¡ria para perseguir o player
+    if (*yp < *yb) {
+        dire = 0; // cima
+    } else if (*yp > *yb) {
+        dire = 1; // baixo
+    } else if (*xp > *xb) {
+        dire = 2; // direita
+    } else if (*xp < *xb) {
+        dire = 3; // esquerda
+    }
+    switch(dire){
+        case 0:
+            novay = *yb - 1; // Move para cima
+            break;
+        case 1:
+            novay = *yb + 1; // Move para baixo
+            break;
+        case 2:
+            novax = *xb + 1; // Move para direita
+            break;
+        case 3:
+            novax = *xb - 1; // Move para esquerda
+            break;
+    }
+
+        if (mapa1[novay][novax] == '.') {
+            mapa1[novay][novax] = 'V';
+            mapa1[*yb][*xb] = '.';
+            *yb = novay;
+            *xb = novax;
+            
+        } else if (mapa1[novay][novax] == '&') {
+            // LÃ³gica de colisÃ£o com o player
+            if (*vida == 0) {
+                system("cls");
+
+
+puts("================-==----:-..::.:.........................................:..:.::------===============");
+puts("===============------:::......................:::::::::::.....................-:-:-------===========");
+puts("==============-----:::::...................-*+=========****+...............:....::--------==========");
+puts("=============----:::::.................::+*=:-**%@@@@@%**+==##=..................::::::--=-=========");
+puts("===========----:-::..................-+.:=%@@@@@@@@@@@@@@@@@+++*#=.................:::-------=======");
+puts("==========-=---::::................-+-.-##@@@@@@@@@@@@@@@@@@@@%#*+*-................:::::---========");
+puts("==========---:-:::................-+===.+%@@@@@@@@@@@@@@@@@@@@@@@#+*+:................:::----=======");
+puts("========-------:.................+*::*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+*-.................::------=====");
+puts("========------::................*=.=#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#+#:................:::-----=-===");
+puts("=======------::::...............*=-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+#:..................::--=--====");
+puts("=====-------::::..............:%--#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*%@.................:::-------=");
+puts("=====------::.................:%--#@@@@%*****#@@@@%*#@@%*****#%@@@@@%*%@.................::::------=");
+puts("======-----::.................:%--#@@@@#.+##*:+%@@%:=%@#.=#%#--%@@@@%*%@...................:--:---==");
+puts("====---=--:-::................:%--#@@@@#:+%@@%.=%@%:=@@#.=%@@%--#@@@%*%@.................::::------=");
+puts("====-=----:::.................:%--#@@@@#:+%@@%.=%@%:=@@#.+%@@%--#@@@%*%@...................::-----==");
+puts("=====-----:::.................:%--#@@@@#:+%@#-:=%@%:=@@#.=%@@-:#@@@@%*%@...................::------=");
+puts("====--=---:-::................:%--#@@#:.....:*@@@@%:=@@#.....+%@@@@@%*%@...................:::----==");
+puts("====------::::................:%-:#@@@@#:==-*%@@@@%:=@@#.+%@@@@@@@@@%*%@.................:::::-----=");
+puts("=====-----::::................:%--#@@@@#:+%=:-#%@@%:=@@#.+%@@@@@@@@@%*%@................:::::---=--=");
+puts("=====------::.................:%--#@@@@#.+%@#:=#@@%:=@@#.=%@@@@@@@@@%*%@................::::-------=");
+puts("=======---:-:::...............:%--#@@@@#.+%@%*.=%@%:=@@#.=%@@@@@@@@@%*%@................:::::---====");
+puts("=======------.................:%-:#@@@@%=*%@@%-*%@%=*@@#=*%@@@@@@@@@%*%@................:::-------==");
+puts("========----:::...............:%--#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*%@................:::------===");
+puts("========--=:-::...............:%--#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*%@................::::--======");
+puts(":-=======-----::..............:%--=+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*%@...............:::-----=====");
+puts("-:-=======-----:..............:%--+*#*+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*%@..............:------=====:.");
+puts("=---::====:--:----::........::=%--+%%%@@@@@@@@@@@@@@@@@%@@@@@+#@@@@@%*%@:::.........::-----===---..:");
+puts("=--:-=+%***#*=-=+--::....:****%@--+%%+*@@@%=%+*%@@@@@@@#%=%@=%##@@@@%*%@@@%*=.....::--=+=#+=*#=:-===");
+puts("==+*++##-%@@#**--=-=-+===++:--..........-=-...========-..=-...:=========-:-+%#====++++==*%@#%#-:==**");
+puts("...............:........+*-%%%*#%%%%%%#%%%%%%%#%%%%%%%#%###*%%%%%%%#++#%#=*#*+......................");
+puts("....................---.+*:*@%+*%@@*=%%@@@*=#@#%@@@@+*++*.+%@@@@@@@@@*:%@%%#**---=-.................");
+puts(".:-.....................-=.--=:=++*=:++*+-+*==.=:+##=--=-####**+--##*=*#****++========-:::::::......");
+puts("+#%#:....................................::..--:..:::..:...-...::::.::-::::.:::==-=------=------:...");
+puts(".::-=-:........-----.........................:..:....::......:-..:-::.::..::::..:-.::...............");
+puts("....................................................................................................");
+puts("...........=.......=:**#*-.............................................................-......----:.");
+puts("........:+-##=.......................................................:+**#+:........:.#+#=:......-=*");
+puts(".......:#+%%@@:...................................................................%*#.%@@@=.........");
+puts("...*##%%%%%%%%##+.........:-#-:*+#*-:..........................................*-##+##%%%%##=:......");
+puts("..............:::===---:..-:.:...::-:.....................................................:::-=-----");
+puts("....................................................................................................");
+puts("......................--:---+*=-....................................................................");
+puts("...............................:...............................................................:::::");
+puts("........................................................................................::::........");
+puts(".....:+###-:.............................................................::.:.......::*#-*##=::.....");
+
+puts("");
+
+                system("pause");
+                system("cls");
+                *vida = 3;
+                *chavecoletada = 0;
+                mapa1[*yb][*xb] = '.'; // Corpo do player some antes de resetar
+                *xp = 1; *yp = 1;
+                *xb = xorig; *yb = yorig; // Reseta a posiÃ§Ã£o do inimigo
+                if(*fase==3){
+                    RENICIARMAPA1(); // Reinicia o mapa 1
+                    iniciarMapa(1); // Reinicia o mapa 1
+                } else if(*fase==4){
+                    RENICIARMAPA2(); // Reinicia o mapa 2
+                    iniciarMapa2(); // Inicia o mapa 2
+                } else if(*fase==5){
+                    RENICIARMAPA3(); // Reinicia o mapa 3
+                    iniciarMapa3(); // Inicia o mapa 3
+                }
+                *fase = 0;
+                return;
+            } else {
+                system("cls");
+
+
+puts(".............................+@@@@@@@@@@@@@@:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@%@@@+---%@@@@%%:..");
+puts("...........................:@@@@%%%%=...%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%#...:%%@@@=.");
+puts(".........................:+@@%**.........-*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*==.........-@@=.");
+puts(".........................+@@-:..@+........:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:+#......-@@=.");
+puts(".........................*@@....@@*.......-@@%@@@@@@@@%+.@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=::.......");
+puts(".........................*%=....@@#+....-#@@*:@@@@@@@@:..+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*-..+:.");
+puts("................................:#@@%%%%@@@@*:@++@*.+@:=%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*.%@+");
+puts("..................................-#@@@@@@@@@@@==@+.+@@@@@@#.#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+");
+puts("....................................------=@@@@%@@@%@@@@@-*#.#@@@@@@@@@@@@@@@@@@@@@+*@@@@@@@@@@@@@@*");
+puts("..........................................:@@@@%@@@@@@-=%.+#.#@@@@@@@@@@@@@@@@@@@@@==@:+%%@@@@@@@@@%");
+puts("......................:*##+.***-..........:@@@@-*#+-:+*-.*%@*%@@@@@@@@@@@@@@@@@@@@@==@....-#@@@@@@@+");
+puts(".....................*@@@+..@@@=.........:=@@@@@@#.#*.%@@@%%@@@@@@@@@@@@@@@@@@@@@@%-:=.:---*@@@@@@@+");
+puts(".....................*@@@@%%@@@=........#%@@@@@@@%*%%*@@@=+%@@@@@@@@@@@@@@@@@@@@@%*:...+@@@@@@@@@@@+");
+puts(".....................*@@@@@@@@=.....:%@@@@@@@@@@@@@@@@:...*@@@@@@@@@@@@@@@@@@@@@@#.....+@@@@@@@@@@@+");
+puts(".....................*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@%-......-....#@@@@+");
+puts(".....................-=+@@@@@@@@@@@@@@@@@@@@@@@@=:=...-=+@@@@@@@@@@@@@@@@@@@@@@@@@@%+....=:=##%@@@=.");
+puts("........................:#@@@@@@@@@@@@@@@@@@@@@@=-+.....-@@@@@@@@@@@@@@@@@@@@@@@@@@@#.....#@@@@@@-..");
+puts("............................#@@%#%@@@@@@@@@@@@......=#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#...:#####+.....");
+puts(".............................+*..=%@@@+=+%@@@%..*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#...............");
+puts("...................................=#@-...:@@%:%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%-%*=@..........");
+puts(".........:*+========+*-..............-...==.%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#==..........");
+puts("........+*:..........:#=.................#@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*...........");
+puts(".....-%@#=.==.....@@@@@+..............#@:#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-.........");
+puts(".......@@%+-:..-%@@=+@@+..............#@@@@@@@@@@@@@@@%%@@@@@@@@@@%@@-*@@%%@@@@@@@@@@@@@@@*-........");
+puts(".........=@+--.-%:....#+............@@@@@@@@@@@@@@@@@@:=@@@@@@#-%#-@@-*%-.+@@@@@@@@@@@@@@@@=........");
+puts(".........:===+##@%##*.-:............@@@@@@@@@@@@+.@%%@:=@.+#.##.%#=@@-*%..+%:#@@@@@@@@@@@@@@@@@#....");
+puts("........+%%%+.::::::=%-...........:*@@@@@@@@@@*=-.@+:-...:*#.##.#@@@@-....-+:#@@#+@@@@@@@@@@@%+:....");
+puts("........+@@-=@@@%%%@@@=..........-#@@@@@@@@@=--...@+.....%%*.....-@@#-......+%:#*:@@@@@@@@@@@@@*....");
+puts("........+#.#@@@#:.:=#@=..........=@@@@@@@@@@:.....@+.............=@@.....-*%@+.*+:@==@@@@@@@@@@%=...");
+puts(".....:+*%@#@#+*#@@@@@@@@@@@@%+...=@@@@@@.:##:.....................-@.......:%:......:--*@#@@@@@@@:..");
+puts("......::*@@=::@@@@@@@@+::::::....@@@@@@@..........................-@................:+++=.#@@@@@@@=.");
+puts(".......#####%@@@@@@@@@=........:-@@@@@@@..........................-%.......................+@@@@@@@+");
+puts("...........#@@%+..@@%........-#@@@@@@@@@....................................................-@@@@@@%");
+puts("..:::::#%%%@@@%%%%@@@%%%%%%%%@@@@@@@@@@@%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@");
+puts("..--------------------------------------------------------------------------------------------------");
+puts("........=*****+****++++*++++++*+++**********++****+++++++*******+*********+*++**++***********++++**+");
+puts("....................................................................................................");
+puts("....................................................................................................");
+puts("....................................................................................................");
+puts("");
+puts("ALGO TERRIVEL ACONTECEU");
+puts("Ao adentrar o terceiro nIvel da masmorra,");
+puts("nosso heroi deu de cara com um terrivel monstro que matou em uma mordida e lhe vomitou logo em seguida");
+puts("Descanse em paz heroi,um pessimo sobrevivente e um pessimo almoco...");
+puts("");
+                system("pause");
+                *vida-=1; // Perde uma vida
+                *chavecoletada = 0; // Reseta a chave coletada
+                mapa1[*yp][*xp] = '.'; // Corpo do player some antes de resetar
+                *xp = 1,*yp=1; // Reseta a posiÃ§Ã£o do player
+                if(*fase==3){
+                    RENICIARMAPA1(); // Reinicia o mapa 1
+                    iniciarMapa(1); // Reinicia o mapa 1
+                } else if(*fase==4){
+                    RENICIARMAPA2(); // Reinicia o mapa 2
+                    iniciarMapa2(); // Inicia o mapa 2
+                } else if(*fase==5){
+                    RENICIARMAPA3(); // Reinicia o mapa 3
+                    iniciarMapa3(); // Inicia o mapa 3
+					}
+            }
+            
+        }
+    
+}
+
+// FunÃ§Ã£o para interagir com a chave
+void interagir_chave(char *direcao, int *cimachave, int *chavecoletada) {
+    if (*direcao == 'i' && *cimachave == 1) {
+        *chavecoletada += 1;
+        *cimachave = 0;
+    }
+}
+
+
+// FunÃ§Ã£o para abrir porta
+void ABRIR_PORTA(int *chavecoletada, int *frenteporta, char *direcao) {
+    // Verifica se o player estÃ¡ em frente a porta, se a chave foi coletada e se ele interagiu
+    if (*chavecoletada > 0 && *frenteporta == 1 && *direcao == 'i') {
+        // Loop para procura e abrir a porta no mapa
+        for (int i = 0; i < ALTURA3; i++) {
+            for (int j = 0; j < LARGURA3; j++) {
+                if (mapa1[i][j] == 'D') {
+                    mapa1[i][j] = '=';
+                    break; // Sai do loop apÃ³s encontrar a porta
+                }
+            }
+        }
+        printf("Porta aberta!\n");
+        system("pause");
+        *frenteporta = 0; // Reseta para nÃ£o abrir de novo
+        *chavecoletada -= 1; // Remove uma chave
+    }
+}
+
+void BOTAO(char *dire, int *cimabotao, int fase){
+    //funÃ§Ã£o para interagir com o botÃ£o
+    static int botoes;
+    if (*dire == 'i' && *cimabotao == 1) {
+        if(fase==1 || fase == 3){
+            *cimabotao = 0;
+            mapa1[1][8]='.';
+            mapa1[2][8]='.';
+        }
+        if (fase==4)
+        {
+            botoes=2;
+            if (botoes==2)
+            {
+                mapa1[3][16]='.';
+                botoes-=1;
+            }
+            if (botoes==1)
+            {
+                mapa1[16][15]='.';
+                botoes-=1;
+            }
+            if(fase==5){
+            mapa1[24][20]='.';
+            mapa1[25][20]='.';
+        }
+            
+        }
+    }
+}
+
+    void INTERAGIR_NPC(char *dire, int *frenteNPC, int *fase) {
+        //FunÃ§Ã£o para interagir com o NPC
+        int c,l;
+        if (*dire == 'i' && *frenteNPC == 1 && *fase == 1) {
+            printf("NPC:Seja bem vindo ao tutorial!\n Mova-se com W A S D\nOs X e V sao inimigos que te matam, mas nao se preocupe que eles sao meio burrinhos");
+            Sleep(400);
+            printf("\nAo pisar na chave clique I para pega-la(Caso ela desapareca nao estranhe, apenas aceite e ignore), a chave serve para abrir portas.\n");
+            printf("NPC ALeatorio que o orÃ§amento nao permitiu nomealo: Caso nao queira me ouvir... Aperte qualquer tecla e pule meu dialogo nada explicativo... ,_,");
+            getch();
+            printf("NPC:Ao pisar no botao clique I para ativar ele, o botao... e um botao, ne... ele faz o que um botao faz ;-;\n");
+            //Eu sou muito engraÃ§ado, nÃ© kkkkkk......... Eu vou chorar... NÃ£o aguento mais esse cÃ³digo, senhor...
+            Sleep(400);
+            printf("\nNPC:Ao pisar no teletransporte ele vai te levar para outro lugar, mas nao se preocupe que ele e bem legal e nao vai te matar(Mas se voce ficar preso... eu nao me responsabilizo).\n");
+            getch();
+            printf("NPC:Aaaah, quase que eu me esqueÃ§o. Tenha cuidado com os espinhos (#) eles nao sao legais e vao te matar, as fases estarao cheia deles (Isso se a equipe tiver orÃ§amento para fazerem bons mapas).\n");
+            Sleep(400);
+            printf("NPC:Por fim, se divirta... e boa sorte, voce vai precisar(Ou talvez nao)!\n");
+            printf("Pressione qualquer tecla para continuar...\n");
+            getch();
+            system("cls");
+            return;
+        } else if(*dire == 'i' && *frenteNPC == 1 && *fase==2){
+            char dialogo[6][1000]={{"???: Outro de Voce? esse lugar nao parece mais tao abandonado entao.\0"},
+            {"Heroi: Quem e voce?\0"},
+            {"Espelho: Olhe para mim, veja como eu o reflito , sou um espelho, e claro. \n Ate mesmo os menos nobres conseguiriam acertar essa. Sera voce que salvara a vila ou encontrar o mesmo destino que os outros antes de voce?\0"},
+            {"Heroi: ..."},
+            {"Espelho: Nao seja tao medroso, vamos la, eu te ensinarei o basico para sobreviver por aqui."},
+            {"Espelho: Primeiramente a chave, ela vai ser sua salvacao daqui em diante, pegue a e encontre a porta para sair desta sala....cuidado...nos nao somos os unicos a frequentar este lugar.\0"}};
+            system("cls"); // Limpa a tela antes do diÃ¡logo
+            printf("========================================================================================================\n");
+            for(c=0; dialogo[c]!='\0'; c++){//Percorre qual o diÃ¡logo falar
+                for(l=0; dialogo[c][l]!='\0'; l++){//Percorre o diÃ¡logo em si
+                    if(c==0 || c==2 || c== 4 || c==5){
+                        if(c==0){
+
+                            if(l>3){
+                                printf( MAGENTA "%c" RESET, dialogo[c][l]);
+                            } else {
+                                printf("%c", dialogo[c][l]);
+                            }
+                        } else if(l>7){
+                            printf( MAGENTA "%c" RESET, dialogo[c][l]);
+                        } else {
+                            printf("%c", dialogo[c][l]);
+                        }
+                    }else{
+                        printf("%c", dialogo[c][l]);
+                    }
+                    Sleep(35); // Atraso para simular digitaÃ§Ã£o
+                    if(kbhit()) { // Verifica se uma tecla foi pressionada
+                        getch(); // Limpa a tecla pressionada
+                        return; // Sai do loop se uma tecla for pressionada
+                    }
+                }
+                printf("\n");// SerÃ¡ que deu certo? Assista no pÂ´roximo episÃ³dio de... programa do Aiam
+                Sleep(50); // Atraso entre os diÃ¡logos
+                if(c==6){
+                    printf("Pressione qualquer tecla para continuar...\n");
+                    getch();
+                    system("cls");
+                    return; // Sai da funÃ§Ã£o apÃ³s o Ãºltimo diÃ¡logo
+                }
+            }
+        }
+    }
+
+int main() {
+	
+	setlocale(LC_ALL,"portuguese");//Coloca a linguagem do programa para portuguï¿½s
+	
+    srand(time(NULL));//Semente para o random
+    
+    //Variaveis para o menu
+	char input;
+    int i;
+    int seta = 1;
+    int opcao;
+    int escolhaFase; //VariÃ¡vel para escolher a fase
+
+    int playerX = 1, playerY = 1; //PosiÃ§Ã£o inicial do player
+    char direcao;
+    int chavecoletada = 0; //VariÃ¡vel para saber se a chave foi coletada
+    int cimachave = 0; //VariÃ¡vel para saber se o player estÃ¡ em cima da chave
+    int vidas = 3; //NÃºmero de vidas do player
+    int frenteporta = 0; //VariÃ¡vel para saber se o player estÃ¡ em frente a porta
+    int fase = -1;// fase atual
+    int cimabotao=0;// se estÃ¡ em cima botÃ£o eu nÃ£o aguento mais esse jogo
+    int frenteNPC; //VariÃ¡vel para saber se o player estÃ¡ em frente a um NPC
+
+
+    int inimigoLV1_2_X = 4,  inimigoLV1_2_Y = 14;
+    int direcaobixinLV1_2 = 0; //DireÃ§Ã£o do inimigo lv:1
+
+    int inimigoLV1_3_X = 9,  inimigoLV1_3_Y = 10;
+    int direcaobixinLV1_3 = 0; //DireÃ§Ã£o do inimigo lv:1
+
+    int inimigoLV1_4_X = 12, inimigoLV1_4_Y = 6;
+    int direcaobixinLV1_4 = 0; //DireÃ§Ã£o do inimigo lv:1
+
+    int inimigoLV1_5_X = 14, inimigoLV1_5_Y = 15;
+    int direcaobixinLV1_5 = 0; //DireÃ§Ã£o do inimigo lv:1
+
+    int inimigoLV1_6_X = 16, inimigoLV1_6_Y = 4;
+    int direcaobixinLV1_6 = 0; //DireÃ§Ã£o do inimigo lv:1
+
+
+    //fase 3
+    int inimigoLV1_7_X = 27, inimigoLV1_7_Y = 13;
+    int direcaobixinLV1_7 = 0; //DireÃ§Ã£o do inimigo lv:1
+
+    int inimigoLV1_8_X = 27, inimigoLV1_8_Y = 13;
+    int direcaobixinLV1_8 = 0; //DireÃ§Ã£o do inimigo lv:1
+    
+    int inimigoLV2X = 22, inimigoLV2Y = 27; //PosiÃ§Ã£o inicial do inimigo
+    int direcaobixinLV2 = 0; //DireÃ§Ã£o do inimigo lv:2
+
+    if(fase==-1){
+        cuts_bosque(); // Exibe a cutscene do bosque
+        fase+=1;
+    }
+    do{
+        do{
+                while(1){
+         	 	 	 	 	 system("cls");
+                puts(YELLOW "  __  .__               _____           ___.   .__    .___  .___             ");
+                puts("_/  |_|  |__   ____   _/ ____\\__________\\_ |__ |__| __| _/__| _/____   ____  ");
+                puts("\\   __\\  |  \\_/ __ \\  \\   __\\/  _ \\_  __ \\ __ \\|  |/ __ |/ __ |/ __ \\ /    \\ ");
+                puts(" |  | |   Y  \\  ___/   |  | (  <_> )  | \\/ \\_\\ \\  / /_/ / /_/ \\  ___/|   |  \\");
+                puts(" |__| |___|  /\\___  >  |__|  \\____/|__|  |___  /__\\____ \\____ |\\___  >___|  /");
+                puts("           \\/     \\/                         \\/        \\/    \\/    \\/     \\/ ");
+                puts("");
+                puts("                 ___________  ____   _______  __ ____                        ");
+                puts("                / ___\\_  __ \\/  _ \\ /  _ \\  \\/ // __ \\                       ");
+                puts("               / /_/  >  | \\(  <_> |  <_> )   /\\  ___/                       ");
+                puts("               \\___  /|__|   \\____/ \\____/ \\_/  \\___  >                      ");
+                puts("              /_____/                               \\/                       ");
+                puts("" RESET);
+
+                for(i=0;i<5;i++){
+					i==seta ? printf(amarelo):printf(branco);
+					switch(i){
+						case 0: printf("\t\t\tSelecionar fase");break;
+							case 1: printf("\t\t\tJogar");break;
+								case 2:printf("\t\t\tTutorial");break;
+									case 3:printf("\t\t\tCreditos");break;
+										case 4:printf("\t\t\tSair");break;
+					}
+					if(i==seta) printf(branco);
+					printf("\n");
+				}
+				input = getch();
+				
+				if(input == 'w' && seta > 0) seta--;
+				if(input == 's' && seta < 4) seta++;
+				
+				system("cls");
+			
+				if(input == '\r'){
+					opcao = seta;
+					break;
+				} 
+		}
+                switch (opcao)
+                {
+                case 1:
+                    fase = 2; //Inicia o jogo na vila
+                    system("cls");
+                    break;
+                case 2:
+                    fase = 1; //Inicia o tutorial
+                    system("cls");
+                    break;
+                case 3:
+                    printf("Creditos:\n");
+                    printf("Equipe de programaÃ§Ã£o: Aiam, Igor, Noah, Rafael.\nDiretor criativo:Rafael.\nEquipe de design:Rafael.\n");
+                    printf("Agradecimentos especiais a Aiam por ser um cara legal, bonito e simpÃ¡ttico (e mentiroso).\n");
+                    printf("E ninguem gosta do Rafael e nem do Aiam(Com razÃ£o) :>\n");
+                    system("pause");
+                    system("cls");
+                    fase = 0; //Volta para o menu
+                    break;
+                case 4:
+                    printf("Volte logo, sentiremos sua falta...\n");
+                    system("pause");
+                    exit(0); //Sai desse INFERNO
+                    break;
+                case 0:
+                	seta = 1;
+                	while(1){
+                		printf("Qual fase voce deseja ir?\n");
+						for(i=1;i<4;i++){
+							
+							i==seta ? printf(amarelo):printf(branco);
+							switch(i){
+								case 1:printf("Fase 1\n");break;
+									case 2:printf("Fase 2\n");break;
+										case 3:printf("Fase 3\n");break;
+							}
+							if (i == seta) printf(branco);
+							printf("\n");
+						}
+							input = getch();
+						if(input == 'w' && seta > 1) seta--;
+						if(input == 's' && seta < 3) seta++;
+						
+						system("cls");
+						
+						if(input == '\r'){
+						escolhaFase = seta;
+						break;
+				}
+					}
+                    switch (escolhaFase) {
+                        case 1:
+                            fase = 3; // Fase 1
+                            break;
+                        case 2:
+                            fase = 4; // Fase 2
+                            break;
+                        case 3:
+                            fase = 5; // Fase 3
+                            break;
+                    }
+                default:
+                    break;
+                }
+        }while (fase == 0);
+        if (fase == 1) {
+            INICIAR_TUTORAS(); //SÃ³ pra transformar o mapa no tutoras, mesmo
+            playerX = 1, playerY = 1; // Reseta a posiÃ§Ã£o do player
+        }
+        do{    
+            iniciarMapa(fase);
+            INTERAGIR_NPC(&direcao, &frenteNPC, &fase);
+            direcao = getch();
+            ABRIR_PORTA(&chavecoletada, &frenteporta, &direcao);
+            BOTAO(&direcao, &cimabotao, fase);
+            interagir_chave(&direcao, &cimachave, &chavecoletada);
+            moveplayer(&playerY, &playerX, &direcao, &chavecoletada, &cimachave, &vidas, &frenteporta, &fase, &cimabotao, &frenteNPC);
+            system("cls");
+            printf("chaves: %d Vida: %d\n", chavecoletada, vidas);
+        }while (fase == 1);//tutorial
+        if (fase == 2) {
+            INICIAR_VILA(); //Copia o mapa da vila para o mapa 1
+            playerX = 1, playerY = 1; // Reseta a posiÃ§Ã£o do player
+        }
+        do{
+            iniciarMapa(fase);
+            INTERAGIR_NPC(&direcao, &frenteNPC, &fase);
+            direcao = getch();
+            ABRIR_PORTA(&chavecoletada, &frenteporta, &direcao);
+            BOTAO(&direcao, &cimabotao, fase);
+            interagir_chave(&direcao, &cimachave, &chavecoletada);
+            moveplayer(&playerY, &playerX, &direcao, &chavecoletada, &cimachave, &vidas, &frenteporta, &fase, &cimabotao, &frenteNPC);
+            system("cls");
+            printf("chaves: %d Vida: %d\n", chavecoletada, vidas);
+        }while (fase == 2);//Vila
+        if (fase==3)
+        {
+        RENICIARMAPA1(); // Reinicia o mapa 1 
+            playerX = 1, playerY = 1; // Reseta a posiÃ§Ã£o do player     
+        }
+        do{ //Loop primeira fase
+            iniciarMapa(fase);
+            direcao = getch();
+            ABRIR_PORTA(&chavecoletada, &frenteporta, &direcao);
+            BOTAO(&direcao, &cimabotao,fase);
+            interagir_chave(&direcao, &cimachave, &chavecoletada);
+            moveplayer(&playerY, &playerX, &direcao, &chavecoletada, &cimachave, &vidas, &frenteporta, &fase, &cimabotao, &frenteNPC);
+            if(fase==0){
+                break; // Se voltar para o menu, sai do loop. Simples, nÃ©?... espero que dÃª certo...
+            }
+            system("cls");
+            printf("chaves: %d Vida: %d\n", chavecoletada, vidas);
+        }while (fase == 3);//Fase 1
+        if (fase==4){
+        iniciarMapa2(); // Copia o mapa 2 para o mapa 1
+        playerX = 1, playerY = 1; // Reseta a posiÃ§Ã£o do player 
+        }
+        do{
+            iniciarMapa(fase);
+            direcao = getch();
+            ABRIR_PORTA(&chavecoletada, &frenteporta, &direcao);
+            BOTAO(&direcao, &cimabotao, fase);
+            interagir_chave(&direcao, &cimachave, &chavecoletada);
+            moveplayer(&playerY, &playerX, &direcao, &chavecoletada, &cimachave, &vidas, &frenteporta, &fase, &cimabotao, &frenteNPC);
+            if(fase==0){
+                break; // Se voltar para o menu, sai do loop. Simples, nÃ©?... espero que dÃª certo...
+            }
+            bixinLV1(&inimigoLV1_2_Y, &inimigoLV1_2_X, &direcaobixinLV1_2, &vidas, &fase, &chavecoletada, &playerY, &playerX);
+            bixinLV1(&inimigoLV1_3_Y, &inimigoLV1_3_X, &direcaobixinLV1_3, &vidas, &fase, &chavecoletada, &playerY, &playerX);
+            bixinLV1(&inimigoLV1_4_Y, &inimigoLV1_4_X, &direcaobixinLV1_4, &vidas, &fase, &chavecoletada, &playerY, &playerX);
+            bixinLV1(&inimigoLV1_5_Y, &inimigoLV1_5_X, &direcaobixinLV1_5, &vidas, &fase, &chavecoletada, &playerY, &playerX);
+            bixinLV1(&inimigoLV1_6_Y, &inimigoLV1_6_X, &direcaobixinLV1_6, &vidas, &fase, &chavecoletada, &playerY, &playerX);
+            system("cls");
+            printf("chaves: %d Vida: %d\n", chavecoletada, vidas);
+        }while(fase == 4);//fase 2
+        if (fase==5)
+        {
+            iniciarMapa3(); //inicia o mapa 3
+            playerX = 1, playerY = 1; // Reseta a posiÃ§Ã£o do player
+        }
+        do{
+            iniciarMapa(fase);
+            direcao = getch();
+            ABRIR_PORTA(&chavecoletada, &frenteporta, &direcao);
+            BOTAO(&direcao, &cimabotao, fase);
+            interagir_chave(&direcao, &cimachave, &chavecoletada);
+            moveplayer(&playerY, &playerX, &direcao, &chavecoletada, &cimachave, &vidas, &frenteporta, &fase, &cimabotao, &frenteNPC);
+            if(fase==0){
+                break; // Se voltar para o menu, sai do loop. Simples, nÃ©?... espero que dÃª certo...
+            }
+            system("cls");
+            printf("chaves: %d Vida: %d\n", chavecoletada, vidas);
+        }while(fase==5);//fase 3a
+    }while (1);//Loop principal do jogo
+    
+    return 0;
+    
+}
+
